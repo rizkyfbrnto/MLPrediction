@@ -13,7 +13,7 @@ with open('./models/model.pkl', 'rb') as model_file:
 with open('./models/pca.pkl', 'rb') as model_file:
     pca = pickle.load(model_file)
     
-hero_data = pd.read_csv('./data/fix.csv', sep=";")
+hero_data = pd.read_csv('./data/fix.csv')
 heroes = hero_data.to_dict(orient='records')
 
 @app.route('/')
